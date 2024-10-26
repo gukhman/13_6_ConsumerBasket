@@ -80,9 +80,9 @@ class MainActivity : BaseActivity() {
     private fun init() {
         addBTN = findViewById(R.id.addBTN)
         clearBTN = findViewById(R.id.clearBTN)
-        nameET = findViewById(R.id.nameET)
-        weightET = findViewById(R.id.weightET)
-        priceET = findViewById(R.id.priceET)
+        nameET = findViewById(R.id.nameTV)
+        weightET = findViewById(R.id.weightTV)
+        priceET = findViewById(R.id.priceTV)
         goodsLV = findViewById(R.id.goodsLV)
     }
 }

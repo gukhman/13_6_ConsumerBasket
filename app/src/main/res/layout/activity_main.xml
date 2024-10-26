@@ -10,7 +10,7 @@
     <include layout="@layout/toolbar" />
 
     <EditText
-        android:id="@+id/nameET"
+        android:id="@+id/nameTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/defMargin"
@@ -24,7 +24,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <EditText
-        android:id="@+id/weightET"
+        android:id="@+id/weightTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/defMargin"
@@ -34,10 +34,10 @@
         android:minWidth="@dimen/minWidthET"
         android:textSize="@dimen/textSize"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameET" />
+        app:layout_constraintTop_toBottomOf="@+id/nameTV" />
 
     <EditText
-        android:id="@+id/priceET"
+        android:id="@+id/priceTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/defMargin"
@@ -47,7 +47,7 @@
         android:minWidth="@dimen/minWidthET"
         android:textSize="@dimen/textSize"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weightET" />
+        app:layout_constraintTop_toBottomOf="@+id/weightTV" />
 
     <Button
         android:id="@+id/addBTN"
@@ -57,7 +57,7 @@
         android:text="@string/addBTN_text"
         android:textSize="@dimen/textSize"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/weightET"
+        app:layout_constraintStart_toEndOf="@+id/weightTV"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <Button
@@ -68,7 +68,7 @@
         android:text="@string/clearBTN_text"
         android:textSize="@dimen/textSize"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/weightET"
+        app:layout_constraintStart_toEndOf="@+id/weightTV"
         app:layout_constraintTop_toBottomOf="@+id/addBTN" />
 
     <TextView
@@ -82,7 +82,7 @@
         android:textSize="@dimen/textSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/priceET" />
+        app:layout_constraintTop_toBottomOf="@+id/priceTV" />
 
     <ListView
         android:id="@+id/goodsLV"
