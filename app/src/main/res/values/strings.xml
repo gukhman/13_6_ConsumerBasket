@@ -2,4 +2,8 @@
     <string name="app_name">13_6_ConsumerBasket</string>
     <string name="exit">Выход</string>
     <string name="toolbarTitle">Потребительская корзина</string>
+    <string name="nameET_hint">Наименование</string>
+    <string name="weightET_hint">Вес</string>
+    <string name="priceET_hint">Цена</string>
+    <string name="addBTN_text">Добавить</string>
 </resources>

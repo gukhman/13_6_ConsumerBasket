@@ -9,4 +9,64 @@
 
     <include layout="@layout/toolbar" />
 
+    <EditText
+        android:id="@+id/nameET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/defMargin"
+        android:layout_marginTop="@dimen/defMargin"
+        android:autofillHints=""
+        android:hint="@string/nameET_hint"
+        android:inputType="textPersonName"
+        android:minWidth="@dimen/minWidthET"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <EditText
+        android:id="@+id/weightET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/defMargin"
+        android:autofillHints=""
+        android:hint="@string/weightET_hint"
+        android:inputType="number|numberDecimal"
+        android:minWidth="@dimen/minWidthET"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameET" />
+
+    <EditText
+        android:id="@+id/priceET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/defMargin"
+        android:autofillHints=""
+        android:hint="@string/priceET_hint"
+        android:inputType="number|numberDecimal"
+        android:minWidth="@dimen/minWidthET"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weightET" />
+
+    <Button
+        android:id="@+id/addBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/addBTN_text"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/weightET"
+        app:layout_constraintTop_toBottomOf="@+id/nameET" />
+
+    <ListView
+        android:id="@+id/personLV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/defMargin"
+        android:padding="@dimen/defPadding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/priceET" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
