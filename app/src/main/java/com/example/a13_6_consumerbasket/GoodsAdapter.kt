@@ -32,9 +32,9 @@ class GoodsAdapter(context: Context, private val data: MutableList<Good>) :
         if (convertView == null) {
             view = inflater.inflate(R.layout.good_item, parent, false)
             holder = ViewHolder()
-            holder.nameTV = view.findViewById(R.id.nameTV)
-            holder.weightTV = view.findViewById(R.id.weightTV)
-            holder.priceTV = view.findViewById(R.id.priceTV)
+            holder.nameTV = view.findViewById(R.id.nameET)
+            holder.weightTV = view.findViewById(R.id.weightET)
+            holder.priceTV = view.findViewById(R.id.priceET)
 
             view.tag = holder
         } else {

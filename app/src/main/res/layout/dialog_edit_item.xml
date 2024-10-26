@@ -1,44 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <TextView
+    <EditText
         android:id="@+id/nameET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/bigMargin"
+        android:layout_marginStart="@dimen/defMargin"
+        android:layout_marginTop="@dimen/defMargin"
         android:autofillHints=""
         android:hint="@string/nameET_hint"
+        android:inputType="textPersonName"
         android:minWidth="@dimen/minWidthET"
         android:textSize="@dimen/textSize"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <EditText
         android:id="@+id/weightET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/defMargin"
+        android:layout_marginTop="@dimen/defMargin"
         android:autofillHints=""
         android:hint="@string/weightET_hint"
+        android:inputType="number|numberDecimal"
         android:minWidth="@dimen/minWidthET"
         android:textSize="@dimen/textSize"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameET" />
 
-    <TextView
+    <EditText
         android:id="@+id/priceET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/defMargin"
+        android:layout_marginStart="@dimen/defMargin"
+        android:layout_marginTop="@dimen/defMargin"
         android:autofillHints=""
         android:hint="@string/priceET_hint"
+        android:inputType="number|numberDecimal"
         android:minWidth="@dimen/minWidthET"
         android:textSize="@dimen/textSize"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameET" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weightET" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

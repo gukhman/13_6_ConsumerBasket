@@ -10,6 +10,7 @@ import kotlin.text.isNotEmpty
 
 class DBHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
     SQLiteOpenHelper(context, DATABASE_NAME, factory, DATABASE_VERSION) {
+
     companion object {
         private const val DATABASE_NAME = "BASKET_DATABASE"
         private const val DATABASE_VERSION = 1
@@ -31,7 +32,7 @@ class DBHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         db.execSQL("DROP TABLE IF EXISTS $TABLE_NAME")
-        onCreate(db) // Пересоздание таблицы после удаления
+        onCreate(db)
     }
 
     fun addName(name: String, weight: String, price: String): Boolean {
@@ -46,7 +47,7 @@ class DBHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
             val result = db.insert(TABLE_NAME, null, values)
             db.close()
 
-            return result != -1L // Возвращаем true, если вставка успешна
+            return result != -1L
         }
         return false
     }
@@ -59,6 +60,28 @@ class DBHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
     fun removeAll() {
         val db = this.writableDatabase
         db.delete(TABLE_NAME, null, null)
-        db.close() // Закрываем базу после удаления
+        db.close()
+    }
+
+    // Функция для удаления одного элемента по ID
+    fun deleteItem(id: Good): Boolean {
+        val db = this.writableDatabase
+        val result = db.delete(TABLE_NAME, "$KEY_ID = ?", arrayOf(id.toString()))
+        db.close()
+        return result > 0 // Возвращает true, если элемент был удален
+    }
+
+    // Функция для обновления одного элемента по ID
+    fun updateItem(id: Good, name: String, weight: String, price: String): Boolean {
+        val db = this.writableDatabase
+        val values = ContentValues().apply {
+            put(KEY_NAME, name)
+            put(KEY_WEIGHT, weight)
+            put(KEY_PRICE, price)
+        }
+
+        val result = db.update(TABLE_NAME, values, "$KEY_ID = ?", arrayOf(id.toString()))
+        db.close()
+        return result > 0 // Возвращает true, если элемент был успешно обновлен
     }
 }
