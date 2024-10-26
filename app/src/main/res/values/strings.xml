@@ -7,4 +7,5 @@
     <string name="priceET_hint">Цена</string>
     <string name="addBTN_text">Добавить</string>
     <string name="checkTV_text">Чек:</string>
+    <string name="clearBTN_text">Очистить</string>
 </resources>
