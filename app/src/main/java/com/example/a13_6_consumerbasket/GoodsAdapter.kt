@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 
-class GoodsAdapter(private val context: Context, private val data: MutableList<Good>) :
+class GoodsAdapter(context: Context, private val data: MutableList<Good>) :
     BaseAdapter() {
 
     private val inflater: LayoutInflater =
@@ -44,8 +44,14 @@ class GoodsAdapter(private val context: Context, private val data: MutableList<G
 
         val listItem = getItem(position) as Good
         holder.nameTV.text = listItem.name
-        holder.weightTV.text = listItem.weight
-        holder.priceTV.text = listItem.price
+        holder.weightTV.text = buildString {
+            append(listItem.weight)
+            append(" гр.")
+        }
+        holder.priceTV.text = buildString {
+            append(listItem.price)
+            append(" руб.")
+        }
 
         return view
     }

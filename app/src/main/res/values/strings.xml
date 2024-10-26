@@ -3,8 +3,8 @@
     <string name="exit">Выход</string>
     <string name="toolbarTitle">Потребительская корзина</string>
     <string name="nameET_hint">Наименование</string>
-    <string name="weightET_hint">Вес</string>
-    <string name="priceET_hint">Цена</string>
+    <string name="weightET_hint">Вес (гр.)</string>
+    <string name="priceET_hint">Цена (руб.)</string>
     <string name="addBTN_text">Добавить</string>
     <string name="checkTV_text">Чек:</string>
     <string name="clearBTN_text">Очистить</string>
