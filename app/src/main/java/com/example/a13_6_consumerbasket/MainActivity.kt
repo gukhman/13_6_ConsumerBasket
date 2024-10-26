@@ -1,6 +1,5 @@
 package com.example.a13_6_consumerbasket
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
