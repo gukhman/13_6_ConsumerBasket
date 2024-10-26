@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">13_6_ConsumerBasket</string>
+    <string name="exit">Выход</string>
+    <string name="toolbarTitle">Потребительская корзина</string>
+</resources>
