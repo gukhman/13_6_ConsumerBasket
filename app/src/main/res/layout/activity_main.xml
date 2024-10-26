@@ -73,7 +73,7 @@
         app:layout_constraintTop_toBottomOf="@+id/priceET" />
 
     <ListView
-        android:id="@+id/personLV"
+        android:id="@+id/goodsLV"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:padding="@dimen/defPadding"
