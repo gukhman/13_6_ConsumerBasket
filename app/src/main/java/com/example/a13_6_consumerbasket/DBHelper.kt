@@ -2,7 +2,6 @@ package com.example.a13_6_consumerbasket
 
 import android.content.ContentValues
 import android.content.Context
-import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import kotlin.apply
@@ -52,10 +51,11 @@ class DBHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
         return false
     }
 
+    /*
     fun getInfo(): Cursor? {
         val db = this.readableDatabase
         return db.rawQuery("SELECT * FROM $TABLE_NAME", null)
-    }
+    }*/
 
     fun removeAll() {
         val db = this.writableDatabase
